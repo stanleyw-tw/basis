@@ -9,6 +9,7 @@
 
 #include <cstdint>
 #include <vector>
+#include <cstdlib>
 
 namespace examples {
 

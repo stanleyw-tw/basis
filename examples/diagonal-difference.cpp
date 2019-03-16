@@ -14,10 +14,21 @@ namespace examples {
  * @return int32_t absolute
  */
 int32_t diagonalDifference(std::vector<std::vector<int32_t>> a) {
-  /*
-   * Write your code here.
-   */
-  return 0;
+  int32_t sum1 = 0;
+  int32_t sum2 = 0;
+
+  if (a.empty()) {
+    // if invalid input
+    return -1;
+  }
+
+  uint64_t size = a.size();
+
+  for (uint64_t i = 0; i < a.size(); i++) {
+    sum1 = sum1 + a.at(i).at(i);
+    sum2 = sum2 + a.at(i).at(size - i - 1);
+  }
+  return abs(sum1 - sum2);
 }
 
-}  // namespace examples
+} // namespace examples
