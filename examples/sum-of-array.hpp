@@ -2,9 +2,12 @@
 
 #include <cstdint>
 #include <vector>
+#include <limits>
+#include <numeric>
+#include <iostream>
 
 namespace examples {
 
-int32_t sumOfArray(const std::vector<int32_t>& a);
+int64_t sumOfArray(const std::vector<int32_t>& a);
 
 }  // namespace examples
