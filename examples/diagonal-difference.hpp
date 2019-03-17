@@ -1,8 +1,8 @@
 /*
  * diagonal-difference.hpp
  *
- *  Created on: Apr 12, 2018
- *      Author: franzef
+ *  Created on: Mar 16, 2019
+ *      Author: Stanley Wu
  */
 
 #pragma once
