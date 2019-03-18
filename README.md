@@ -5,6 +5,7 @@
  Using scons.
 
     - build examples                  : scons
+    - clean examples                  : scons -c
 
 ## C/C++
 
@@ -16,5 +17,6 @@
       ## Modify return data type to avoid "comparison is always false due to limited range of data type"
     - Example 4: medium: Graybox problem
     - Example 5: medium: Minimum Unique Array Sum with possibly large values
+      ## Modify return data type to avoid "comparison is always false due to limited range of data type"
     - Example 6: difficult: Find the running median
     - Example 7: difficult: Bob, Alice and Bobby
