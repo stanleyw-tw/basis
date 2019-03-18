@@ -5,6 +5,6 @@
 
 namespace examples {
 
-int32_t uniqueSumOfArray(const std::vector<int32_t>& a);
+int64_t uniqueSumOfArray(const std::vector<int32_t>& a);
 
 }  // namespace examples

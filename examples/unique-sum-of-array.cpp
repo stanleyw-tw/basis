@@ -1,4 +1,6 @@
+#include <algorithm>
 #include <cstdint>
+#include <iostream>
 #include <vector>
 
 #include "unique-sum-of-array.hpp"
@@ -19,11 +21,34 @@ namespace examples {
  * @param a
  * @return int32_t
  */
-int32_t uniqueSumOfArray(const std::vector<int32_t>& a) {
+int64_t uniqueSumOfArray(const std::vector<int32_t> &a) {
   /*
    * Write your code here.
    */
-  return 0;
+  if (a.empty()) {
+    // invalid input
+    return -1;
+  }
+
+  std::vector<int> sortedVector = a;
+  std::sort(sortedVector.begin(), sortedVector.end());
+  uint64_t size = sortedVector.size();
+
+  int64_t ans = sortedVector[0];
+  for (uint64_t i = 1; i < size; i++) {
+    if (sortedVector[i] == sortedVector[i - 1]) {
+      uint64_t j = i;
+      while ((j < size) && (sortedVector[j] <= sortedVector[j - 1])) {
+
+        sortedVector[j] = sortedVector[j] + 1;
+
+        j++;
+      }
+    }
+    ans = ans + sortedVector[i];
+    // std::cout<<ans<<std::endl;
+  }
+  return ans;
 }
 
-}  // namespace examples
+} // namespace examples
