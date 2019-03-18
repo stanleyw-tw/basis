@@ -30,7 +30,7 @@ int64_t uniqueSumOfArray(const std::vector<int32_t> &a) {
     return -1;
   }
 
-  std::vector<int> sortedVector = a;
+  std::vector<int32_t> sortedVector = a;
   std::sort(sortedVector.begin(), sortedVector.end());
   uint64_t size = sortedVector.size();
 
